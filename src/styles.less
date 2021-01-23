@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+
+    .main {
+        width: 100%;       
+        height: 100%; 
+        // position: absolute;
+        // position: ;
+        background: linear-gradient(215deg, #8f0013, #a31b8d, #6e2a7c, #2f0c68);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // overflow-y: scroll;
+
+        .todo__container {
+            // position: absolute;
+            width: 80%;
+            min-height: 100%;
+            border-radius: 5px;
+            display: flex;
+            box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.28),
+            10px 0px 8px rgba(0, 0, 0, 0.28);
+
+            box-sizing: border-box;
+
+            .todo__sidebar {
+                margin-right: 20px;
+                width: 10%;
+                height: 100%;
+                position: fixed;
+                top: 5px;
+
+                .todo__option {
+                    padding: 10px;
+                    width: 100%;
+                    
+                    .option__item {
+                        width: 100%;
+                        margin: 5px 0;
+                        background:#5e5e5e50;
+
+                        button {
+                            background: #46454569;
+                            color: #ffffff;
+                            font-size: 0.85rem;
+                            width: 100%;
+                        }
+
+                        .btn:hover {
+                            background: #63626275;
+                        }
+                    }
+                }
+            }
+
+            .todo__items {
+                margin-left: 15%;
+                width: 100%;
+                min-height: 100%;
+                padding: 20px;
+                box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.28),
+                10px 0px 8px rgba(0, 0, 0, 0.28);
+
+                display: flex;
+                flex-direction: column;
+                
+                .todo__item {
+                    width: 100%;
+                    height: 100px;
+                    background:#46454569;
+                    
+                    display: flex;
+                    align-items: center;
+    
+                    padding: 30px 15px;
+                    margin-bottom: 20px;
+    
+                    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+                    cursor: pointer;
+
+                    // position: relative;
+    
+                    .todo__input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 40px 0 10px;
+                        background: #dad8d8;
+                        border: 1px solid #838282;
+                        margin-right: 10px;
+    
+                        input {
+                            background: #dad8d8;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            box-sizing: border-box;
+                            
+    
+                            padding: 5px;
+                            color: #000000;
+                            text-align: center;
+                        }
+    
+                        input[type="text"]:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .success::after {
+                        font-family: 'FontAwesome';
+                        content: '\f058';
+                        color: #2dce57;    
+                        font-size: 1.5rem;
+                        
+                        position: absolute;
+                    }
+    
+                    .todo__buttons {
+                        display: flex;
+                        height: 30px;
+    
+                        .btns {
+                            width: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 5px;
+
+                            font-size: 0.8rem;
+                        }
+
+                        .btns::after {
+                            font-family: "FontAwesome";
+                            color: #ffffff;
+                        }
+
+                        .btn-success::after {
+                            content: "\f00c";
+                        }
+
+                        .btn-warning::after {
+                            content: "\f0e2";
+                        }
+
+                        .btn-primary::after {
+                            content: "\f304";
+                        }
+
+                        .btn-danger::after {
+                            content: "\f2ed";
+                        }
+                    }
+                }
+    
+                .todo__item:hover {
+                    background:#464545b4;
+                }
+            }
+        }
+    }
+}
